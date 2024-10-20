@@ -26,6 +26,6 @@ We also write serializers to convert model instances into JSON format for the AP
 In this module, we refactor the code using viewsets to handle model-based views.
 We set up routers for more efficient URL routing based on viewsets.
 
-Module 8: Write Final Unit Tests
+𝐌𝐨𝐝𝐮𝐥𝐞 𝟖: 𝐖𝐫𝐢𝐭𝐞 𝐅𝐢𝐧𝐚𝐥 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐬
 In this final module, we write unit tests to cover the endpoints created in previous modules.
 We ensure full test coverage for the API, including authentication and model validation.
