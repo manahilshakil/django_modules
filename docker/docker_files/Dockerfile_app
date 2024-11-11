@@ -3,16 +3,19 @@ FROM python:3.10
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
+# Update and install necessary packages
 RUN set -e; \
-    apt-get update ;\
-    apt-get -y install netcat ;\
-    apt-get -y install gettext ;\
-    apt-get -y  install httpie; \
-    pip install --upgrade pip \
+    apt-get update && \
+    apt-get -y install netcat-traditional && \
+    apt-get -y install gettext && \
+    apt-get -y install httpie && \
+    pip install --upgrade pip && \
     pip install flask
 
+# Create and set the working directory
 RUN mkdir /code
 WORKDIR /code
 COPY ./server.py .
 
-ENTRYPOINT ["python","./server.py"]
+# Start the app
+ENTRYPOINT ["python", "./server.py"]
